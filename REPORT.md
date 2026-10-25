@@ -42,7 +42,7 @@ IKEv2 (Internet Key Exchange version 2) согласует криптограф�
 | Authentication Data | Симметричный механизм | AUTH method 2 вычисляется с общим PSK и согласованной PRF. Это keyed-проверка знания секрета, а не операция с открытым ключом. |
 | Integrity Checksum Data | Симметричный механизм | Это внешний для AUTH HMAC-SHA-1-96, проверенный по отдельному ключу целостности. В кадрах 3 и 4 проверка успешна. |
 
-## По желанию: расшифрование ESP
+## Расшифрование ESP
 
 Файл `esp_sa` размещён в `/Users/dmitriinizovcev/.config/wireshark/esp_sa`. Для SPI `0xca013134` запись задаёт направление `10.20.2.1` → `10.20.2.2`, алгоритм шифрования `NULL` и целостность HMAC-SHA-1-96. Для декодирования включены пользовательские параметры Wireshark `esp.enable_encryption_decode` и `esp.enable_authentication_check`.
 
